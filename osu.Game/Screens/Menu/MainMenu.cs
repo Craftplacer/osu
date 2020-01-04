@@ -69,6 +69,8 @@ namespace osu.Game.Screens.Menu
 
         private ExitConfirmOverlay exitConfirmOverlay;
 
+        private SongTracker songTracker;
+
         [BackgroundDependencyLoader(true)]
         private void load(DirectOverlay direct, SettingsOverlay settings, OsuConfigManager config, SessionStatics statics)
         {
@@ -107,6 +109,10 @@ namespace osu.Game.Screens.Menu
                     }
                 },
                 sideFlashes = new MenuSideFlashes(),
+                songTracker = new SongTracker()
+                {
+                    RelativeSizeAxes = Axes.Both,
+                },
             });
 
             buttons.StateChanged += state =>
