@@ -118,7 +118,7 @@ namespace osu.Game.Tests.Visual
             {
                 dummyAPI = new DummyAPIAccess();
                 Dependencies.CacheAs<IAPIProvider>(dummyAPI);
-                Add(dummyAPI);
+                AddInternal(dummyAPI);
             }
 
             return Dependencies;
